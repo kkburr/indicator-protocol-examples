@@ -24,7 +24,7 @@ indicators:
 - name: events_published_step
   promql: events_published{source_id="healthwatch-forwarder",deployment="healthwatch-v1-5"}
   presentation:
-    currentValue: false
+    currentValue: true
     chartType: step
   documentation:
     title: Healthwatch events published
