@@ -34,7 +34,7 @@ indicators:
   - level: warning
     gt: 400
   presentation:
-    chartType: bar
+    chartType: line
     frequency: 2m
   documentation:
     title: Router 99th Percentile Latency
