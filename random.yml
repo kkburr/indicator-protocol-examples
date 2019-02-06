@@ -29,6 +29,7 @@ indicators:
     gt: 98
   presentation:
     currentValue: true
+    chartType: step
   documentation:
     title: Mysql CPU Utilization
     recommended_response: Scale up mysql instances
