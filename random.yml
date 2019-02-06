@@ -17,7 +17,7 @@ indicators:
     gt: 98
   presentation:
     currentValue: true
-    chartType: bar
+    chartType: bard
   documentation:
     title: Mysql CPU Utilization
     recommended_response: Scale up mysql instances
