@@ -25,7 +25,7 @@ indicators:
   promql: events_published{source_id="healthwatch-forwarder",deployment="healthwatch-v1-5"}
   presentation:
     currentValue: true
-    chartType: step
+    chartType: line
   documentation:
     title: Healthwatch events published
 - name: router_99th_latency
