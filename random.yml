@@ -1,0 +1,35 @@
+---
+apiVersion: v0
+
+product:
+  name: Our random test
+  version: v1
+
+metadata:
+  deployment: Examples
+  description: This is a dashboard to test the various UI interactions of Healthwatch and Indicator Protocol. This dashboard was created from https://github.com/joerodriguez/indicator-protocol-examples and will not appear in any other environment.
+
+indicators:
+- name: router_99th_latency
+  promql: quantile_over_time(0.99, latency{source_id="gorouter",deployment="cf"}[1m])
+  thresholds:
+  - level: warning
+    gt: 400
+  presentation:
+    chartType: bar
+    frequency: 2m
+  documentation:
+    title: Router 99th Percentile Latency
+    description: go router performance
+    recommended_response: scale up go router instances
+- name: mysql_cpu
+  promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",deployment="cf"}
+  thresholds:
+  - level: warning
+    gt: 98
+  presentation:
+    currentValue: true
+  documentation:
+    title: Mysql CPU Utilization
+    recommended_response: Scale up mysql instances
+
