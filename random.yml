@@ -18,7 +18,6 @@ indicators:
   presentation:
     currentValue: false
     frequency: 10m
-    chartType: bar
   documentation:
     title: Credhub CPU Utilization
     recommended_response: Scale up Credhub instances
@@ -26,6 +25,5 @@ indicators:
   promql: events_published{source_id="healthwatch-forwarder",deployment="healthwatch-v1-5"}
   presentation:
     currentValue: true
-    chartType: step
   documentation:
     title: Healthwatch events published
