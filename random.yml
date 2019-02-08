@@ -10,16 +10,18 @@ metadata:
   description: This is a dashboard to test the various UI interactions of Healthwatch and Indicator Protocol. This dashboard was created from https://github.com/joerodriguez/indicator-protocol-examples and will not appear in any other environment.
 
 indicators:
-- name: mysql_cpu
-  promql: system_cpu_user{source_id="bosh-system-metrics-forwarder"}
+- name: credhub_cpu
+  promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
   thresholds:
   - level: warning
     gt: 98
   presentation:
     currentValue: false
+    frequency: 10m
+    chartType: bar
   documentation:
-    title: Mysql CPU Utilization
-    recommended_response: Scale up mysql instances
+    title: Credhub CPU Utilization
+    recommended_response: Scale up Credhub instances
 - name: events_published_step
   promql: events_published{source_id="healthwatch-forwarder",deployment="healthwatch-v1-5"}
   presentation:
@@ -27,15 +29,3 @@ indicators:
     chartType: step
   documentation:
     title: Healthwatch events published
-- name: router_99th_latency
-  promql: quantile_over_time(0.99, latency{source_id="gorouter",deployment="cf"}[1m])
-  thresholds:
-  - level: warning
-    gt: 400
-  presentation:
-    chartType: step
-    frequency: 2m
-  documentation:
-    title: Router 99th Percentile Latency
-    description: go router performance
-    recommended_response: scale up go router instances
