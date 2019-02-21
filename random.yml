@@ -16,7 +16,7 @@ indicators:
   - level: warning
     gt: 98
   presentation:
-    currentValue: false
+    currentValue: true
     frequency: 10m
   documentation:
     title: Credhub CPU Utilization
