@@ -18,6 +18,7 @@ indicators:
   presentation:
     currentValue: true
     frequency: 10m
+    labels: []
   documentation:
     title: Credhub CPU Utilization
     recommended_response: Scale up Credhub instances
