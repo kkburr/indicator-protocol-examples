@@ -1,9 +1,3 @@
-
-indicators:
-- name: credhub_cpu
-  thresholds:
-  - level: warning
-    gt: 0.3
 ---
 apiVersion: v0/patch
 
