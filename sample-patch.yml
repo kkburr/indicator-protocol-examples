@@ -8,7 +8,7 @@ match:
 
 operations:
 - op: replace
-  path: /indicators/1/thresholds
+  path: /indicators/0/thresholds
   value:
     thresholds:
     - level: warning
