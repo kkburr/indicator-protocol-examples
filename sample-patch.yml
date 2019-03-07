@@ -10,6 +10,5 @@ operations:
 - op: replace
   path: /indicators/0/thresholds
   value:
-    thresholds:
     - level: warning
       gt: 0.3
