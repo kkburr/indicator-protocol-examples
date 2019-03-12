@@ -10,7 +10,7 @@ metadata:
   description: This is a dashboard to test the various UI interactions of Healthwatch and Indicator Protocol. This dashboard was created from https://github.com/joerodriguez/indicator-protocol-examples and will not appear in any other environment.
 
 indicators:
-- name: credhub_cpu
+- name: credhub_cpu_empty_labels
   promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
   thresholds:
   - level: warning
@@ -22,6 +22,19 @@ indicators:
   documentation:
     title: Credhub CPU Utilization
     recommended_response: Scale up Credhub instances
+- name: credhub_cpu
+  promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
+  thresholds:
+  - level: warning
+    gt: 98
+  presentation:
+    currentValue: true
+    frequency: 10m
+    labels: ['deployment','ip']
+  documentation:
+    title: Credhub CPU Utilization
+    recommendedResponse: Scale up Credhub instances
+    thresholdNote: env specific
 - name: events_published_step
   promql: events_published{source_id="healthwatch-forwarder",deployment="healthwatch-v1-5"}
   presentation:
