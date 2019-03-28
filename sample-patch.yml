@@ -12,3 +12,9 @@ operations:
   value:
     - level: warning
       gt: 0.3
+
+- type: replace
+  path: /indicators/name="doc_performance_indicator"/thresholds
+  value:
+    - level: warning
+      gt: 0.3
