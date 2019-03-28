@@ -3,12 +3,12 @@ apiVersion: v0/patch
 
 match:
   product:
-    name: Our random test
-    version: v1
+    name: healthwatch
+    version: v1.5
 
 operations:
 - op: replace
-  path: /indicators/0/thresholds
+  path: /indicators/name="foofoobar"/thresholds
   value:
     - level: warning
       gt: 0.3
