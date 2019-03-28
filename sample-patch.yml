@@ -7,7 +7,7 @@ match:
     version: v1.5
 
 operations:
-- op: replace
+- type: replace
   path: /indicators/name="foofoobar"/thresholds
   value:
     - level: warning
