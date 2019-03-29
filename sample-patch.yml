@@ -3,8 +3,7 @@ apiVersion: v0/patch
 
 match:
   product:
-    name: healthwatch
-    version: v1.5
+    name: Our random test
 
 operations:
 - type: replace
