@@ -16,9 +16,10 @@ indicators:
   - level: warning
     gt: 98
   presentation:
-    currentValue: true
+    currentValue: false
     frequency: 10m
     labels: []
+    units: megabits
   documentation:
     title: Credhub CPU Utilization
     recommended_response: Scale up Credhub instances
