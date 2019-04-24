@@ -15,9 +15,12 @@ indicators:
   thresholds:
   - level: warning
     gt: 0.3
+  - level: critical
+    gt: 0.4    
   presentation:
+    chartType: status
     currentValue: false
-    frequency: 10m
+    frequency: 600
     labels: []
     units: megabits
   documentation:
@@ -30,7 +33,7 @@ indicators:
     gt: 98
   presentation:
     currentValue: true
-    frequency: 10m
+    frequency: 600
     labels: ['deployment','ip']
   documentation:
     title: Credhub CPU Utilization
