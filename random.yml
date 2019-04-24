@@ -14,7 +14,7 @@ indicators:
   promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
   thresholds:
   - level: warning
-    gt: 98
+    gt: 0.3
   presentation:
     currentValue: false
     frequency: 10m
@@ -29,7 +29,7 @@ indicators:
   - level: warning
     gt: 98
   presentation:
-    currentValue: false
+    currentValue: true
     frequency: 10m
     labels: ['deployment','ip']
   documentation:
@@ -39,6 +39,6 @@ indicators:
 - name: events_published_step
   promql: sum(sum_over_time(events_published{source_id="healthwatch-forwarder",deployment="healthwatch-v1-5"}[$step]))
   presentation:
-    currentValue: false
+    currentValue: true
   documentation:
     title: Healthwatch events published
