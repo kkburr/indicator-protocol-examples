@@ -30,7 +30,7 @@ indicators:
   promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
   thresholds:
   - level: warning
-    gt: 0
+    gte: 0
   presentation:
     currentValue: true
     frequency: 600
