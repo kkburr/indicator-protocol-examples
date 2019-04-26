@@ -45,3 +45,8 @@ indicators:
     currentValue: true
   documentation:
     title: Healthwatch events published
+- name: uaa_something
+  promql: vitals_vm_cpu_count{source_id="uaa"}
+  thresholds:
+  - level: warning
+    gte: 1
