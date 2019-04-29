@@ -11,7 +11,7 @@ metadata:
 
 indicators:
 - name: credhub_cpu_empty_labels
-  promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
+  promql: rate(system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}[$range])
   thresholds:
   - level: warning
     gt: 0.3
@@ -24,7 +24,7 @@ indicators:
     labels: []
     units: megabits
   documentation:
-    title: Credhub CPU Utilization
+    title: Rate CPU Utilization (dynamic query range)
     recommended_response: Scale up Credhub instances
 - name: credhub_cpu
   promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
