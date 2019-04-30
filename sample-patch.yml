@@ -13,6 +13,12 @@ operations:
       gt: 0.3
 
 - type: replace
-  path: /indicators/name=credhub_cpu/serviceLevel
+  path: /indicators/name="credhub_cpu"/serviceLevel
   value:
     objective: 80
+
+- type: replace
+  path: /indicators/name="credhub_cpu"/thresholds/level="warning"
+  value:
+    level: warning
+    gte: 5
