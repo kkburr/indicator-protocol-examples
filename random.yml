@@ -46,7 +46,7 @@ indicators:
   documentation:
     title: Healthwatch events published
 - name: router_uptime
-  promql: uptime{source_id="gorouter"}
+  promql: rate(uptime{source_id="gorouter"}[$step])
   thresholds:
   - level: warning
     gte: 1
