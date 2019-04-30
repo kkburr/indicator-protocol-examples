@@ -1,25 +1,20 @@
+
 ---
 apiVersion: v0/patch
 
 match:
   product:
-    name: our-random-test
-    version: v1
+    name: Our random test
 
 operations:
 - type: replace
   path: /indicators/name="foofoobar"/thresholds
   value:
-  - level: warning
+    - level: warning
       gt: 0.3
 
 - type: replace
-  path: /indicators/name="credhub_cpu"/serviceLevel
+  path: /indicators/name=doc_performance_indicator/thresholds
   value:
-    objective: 80
-
-- type: replace
-  path: /indicators/name="credhub_cpu"/thresholds/level="warning"
-  value:
-    level: warning
-    gte: 5
+    - level: warning
+      gt: 0.3
