@@ -3,7 +3,7 @@ apiVersion: v0/patch
 
 match:
   product:
-    name: "Our random test"
+    name: our-random-test
     version: v1
 
 operations:
