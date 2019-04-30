@@ -10,7 +10,7 @@ operations:
   path: /indicators/name="foofoobar"/thresholds
   value:
   - level: warning
-      gt: 0.3
+    gt: 0.3
 
 - type: replace
   path: /indicators/name=credhub_cpu/serviceLevel
