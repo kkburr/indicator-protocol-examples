@@ -4,7 +4,7 @@ apiVersion: v0/patch
 match:
   product:
     name: our-random-test
-    version: v1
+    version: v4
 
 operations:
 - type: replace
