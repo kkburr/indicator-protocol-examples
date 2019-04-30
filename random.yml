@@ -32,7 +32,7 @@ indicators:
   - level: warning
     gte: 0
   presentation:
-    currentValue: true
+    currentValue: false
     frequency: 600
     labels: ['deployment','ip']
   documentation:
