@@ -2,7 +2,7 @@
 apiVersion: v0
 
 product:
-  name: Our random test
+  name: our-random-test
   version: v1
 
 metadata:
