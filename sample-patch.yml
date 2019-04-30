@@ -8,7 +8,7 @@ match:
 
 operations:
 - type: replace
-  path: /indicators/name="foofoobar"/thresholds
+  path: /indicators/name="credhub_cpu"/thresholds
   value:
   - level: warning
     gt: 0.5
