@@ -45,8 +45,8 @@ indicators:
     currentValue: true
   documentation:
     title: Healthwatch events published
-- name: uaa_something
-  promql: vitals_vm_cpu_count{source_id="uaa"}
+- name: router_uptime
+  promql: uptime{source_id="gorouter"}
   thresholds:
   - level: warning
     gte: 1
