@@ -11,7 +11,7 @@ metadata:
 
 indicators:
 - name: credhub_cpu_empty_labels
-  promql: rate(system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}[$step])
+  promql: system_cpu_user{source_id="bosh-system-metrics-forwarder",job="credhub"}
   thresholds:
   - level: warning
     gt: 0.3
