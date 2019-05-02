@@ -45,8 +45,8 @@ indicators:
     currentValue: true
   documentation:
     title: Healthwatch events published
-- name: router_uptime
-  promql: rate(uptime{source_id="gorouter"}[5m])
+- name: router_uptime_rate
+  promql: rate(uptime{source_id="gorouter"}[$step])
   presentation:
     frequency: 1
   thresholds:
