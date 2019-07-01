@@ -15,4 +15,4 @@ operations:
 - type: replace
   path: /indicators/name=credhub_cpu/serviceLevel
   value:
-    objective: 80
+    objective: 8000000000000000
