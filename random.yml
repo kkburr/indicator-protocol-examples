@@ -20,7 +20,7 @@ indicators:
   presentation:
     chartType: status
     currentValue: false
-    frequency: 600111110000
+    frequency: 7000001
     labels: []
     units: megabits
   documentation:
